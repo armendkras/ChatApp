@@ -19,7 +19,7 @@ const MainAvatar: FC<MainAvatarProps> = ({ size = 60 }) => {
         }}
         style={styles.image}
       />
-      //dd
+
       <View
         style={[
           styles.active,
