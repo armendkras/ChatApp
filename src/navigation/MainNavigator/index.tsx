@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import BottomTabNavigator from "../BottomTabNavigator";
-import { ChatRoom } from "../../screens";
-import ChatWithOutBottomBar from "../ChatNavigator/ChatWithoutBottomBar";
 
 interface MainNavigatorProps {}
 
@@ -15,11 +13,7 @@ const MainNavigator: FC<MainNavigatorProps> = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="TabNav" component={BottomTabNavigator} />
-      <Stack.Screen
-        name="ChatWithOutBottomBar"
-        component={ChatWithOutBottomBar}
-      />
+      <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
     </Stack.Navigator>
   );
 };

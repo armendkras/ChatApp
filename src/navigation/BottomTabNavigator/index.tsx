@@ -4,18 +4,12 @@ import {
   createBottomTabNavigator,
   useBottomTabBarHeight,
 } from "@react-navigation/bottom-tabs";
-import { Crm, Ats, Activities, Notifications } from "../../screens";
+import { People, Discover, Chats } from "../../screens";
 import { StyleSheet, Platform } from "react-native";
 import TabButton from "./TabButton";
-import ChatNavigator from "../ChatNavigator/ChatWithBottomBar";
-import {
-  CrmIcon,
-  AtsIcon,
-  ActivitiesIcon,
-  ChatIcon,
-  BellIcon,
-} from "../../assets/svgs";
-import { Colors } from "../../constants/colors";
+// import ChatNavigator from "../ChatNavigator/ChatWithBottomBar";
+import { MessageIcon, PeopleIcon, DiscoverIcon } from "../../assets/svgs";
+// import { Colors } from "../../constants/colors";
 
 const Stack = createStackNavigator();
 
@@ -39,21 +33,19 @@ const TabNavigator: FC<TabNavigatorProps> = (props) => {
             <TabButton
               {...props}
               events={events}
-              label={"Crm"}
+              label={"Chats"}
               Icon={
-                <CrmIcon
+                <MessageIcon
                   color={
-                    props.accessibilityState.selected
-                      ? Colors.PURPLE
-                      : Colors.BLACK
+                    props.accessibilityState.selected ? "#0084FE" : "#A4AAB2"
                   }
                 />
               }
             />
           ),
         }}
-        name="Crm"
-        component={Crm}
+        name="Chats"
+        component={Chats}
       />
 
       <Tab.Screen
@@ -62,21 +54,19 @@ const TabNavigator: FC<TabNavigatorProps> = (props) => {
             <TabButton
               {...props}
               events={events}
-              label={"Ats"}
+              label={"People"}
               Icon={
-                <AtsIcon
+                <PeopleIcon
                   color={
-                    props.accessibilityState.selected
-                      ? Colors.PURPLE
-                      : Colors.BLACK
+                    props.accessibilityState.selected ? "#0084FE" : "#A4AAB2"
                   }
                 />
               }
             />
           ),
         }}
-        name="Ats"
-        component={Ats}
+        name="People"
+        component={People}
       />
       <Tab.Screen
         options={{
@@ -84,24 +74,20 @@ const TabNavigator: FC<TabNavigatorProps> = (props) => {
             <TabButton
               {...props}
               events={events}
-              label={"Activities"}
+              label={"Discover"}
               Icon={
-                <ActivitiesIcon
+                <DiscoverIcon
                   color={
-                    props.accessibilityState.selected
-                      ? Colors.PURPLE
-                      : Colors.BLACK
+                    props.accessibilityState.selected ? "#0084FE" : "#A4AAB2"
                   }
                 />
               }
             />
           ),
         }}
-        name="Activities"
-        component={Activities}
+        name="Discover"
+        component={Discover}
       />
-
-      
     </Tab.Navigator>
   );
 };
@@ -112,6 +98,6 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
     alignItems: "center",
-    minHeight: 51,
+    minHeight: 85,
   },
 });
