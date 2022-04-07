@@ -4,14 +4,20 @@ import FastImage from "react-native-fast-image";
 import styles from "./style";
 
 interface MainAvatarProps {
-  size: number;
+  size?: number;
+  active?: boolean;
+  disabled?: boolean;
 }
 
-const MainAvatar: FC<MainAvatarProps> = ({ size = 60 }) => {
+const MainAvatar: FC<MainAvatarProps> = ({
+  size = 60,
+  active = false,
+  disabled = true,
+}) => {
   return (
     <TouchableOpacity
       style={[styles.container, { height: size, width: size }]}
-      disabled
+      disabled={disabled}
     >
       <FastImage
         source={{
@@ -20,16 +26,18 @@ const MainAvatar: FC<MainAvatarProps> = ({ size = 60 }) => {
         style={styles.image}
       />
 
-      <View
-        style={[
-          styles.active,
-          {
-            width: size / 3,
-            height: size / 3,
-            borderWidth: size / 17,
-          },
-        ]}
-      />
+      {active && (
+        <View
+          style={[
+            styles.active,
+            {
+              width: size / 3,
+              height: size / 3,
+              borderWidth: size / 17,
+            },
+          ]}
+        />
+      )}
     </TouchableOpacity>
   );
 };
