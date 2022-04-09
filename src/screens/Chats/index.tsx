@@ -1,13 +1,14 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { Header, MainAvatar, PrimaryText } from "../../components";
+import { SearchIcon } from "../../assets/svgs";
+import { SearchBar } from "../../components";
+import Layout from "../../layout";
 
 const Chats = () => {
   return (
-    <SafeAreaView>
-      <Header />
-    </SafeAreaView>
+    <Layout>
+      <SearchBar icon={<SearchIcon color="#8E8E93" />} placeholder="Search" />
+    </Layout>
   );
 };
 
