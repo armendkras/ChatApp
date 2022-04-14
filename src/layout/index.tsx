@@ -6,12 +6,16 @@ import styles from "./style";
 
 interface LayoutProps {
   children: any;
+  type: "People" | "Chats" | "Discover";
 }
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children, type }) => {
   return (
     <SafeAreaView style={styles.container}>
-      <MainHeader containerStyle={{ marginHorizontal: 15, marginTop: 12 }} />
+      <MainHeader
+        type={type}
+        containerStyle={{ marginHorizontal: 15, marginTop: 12 }}
+      />
       {children}
     </SafeAreaView>
   );

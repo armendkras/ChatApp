@@ -1,11 +1,13 @@
 import { View, Text } from "react-native";
 import React from "react";
+import Layout from "../../layout";
+import { PeopleContent } from "../../components";
 
 const People = () => {
   return (
-    <View>
-      <Text>People</Text>
-    </View>
+    <Layout type="People">
+      <PeopleContent />
+    </Layout>
   );
 };
 
