@@ -7,6 +7,7 @@ interface RoundButtonProps {
   size?: number;
   containerStyle?: {};
   onPress?: () => void;
+  disabled?: boolean;
 }
 
 const RoundButton: FC<RoundButtonProps> = ({
@@ -14,9 +15,11 @@ const RoundButton: FC<RoundButtonProps> = ({
   size = 40,
   onPress,
   containerStyle,
+  disabled,
 }) => {
   return (
     <TouchableOpacity
+      disabled={disabled}
       onPress={onPress}
       style={[styles.container, { width: size, height: size }, containerStyle]}
     >
