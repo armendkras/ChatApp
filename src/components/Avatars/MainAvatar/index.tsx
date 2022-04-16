@@ -8,6 +8,7 @@ interface MainAvatarProps {
   active?: boolean;
   disabled?: boolean;
   img?: string;
+  containerStyle?: {};
 }
 
 const MainAvatar: FC<MainAvatarProps> = ({
@@ -15,10 +16,11 @@ const MainAvatar: FC<MainAvatarProps> = ({
   active = false,
   disabled = true,
   img,
+  containerStyle,
 }) => {
   return (
     <TouchableOpacity
-      style={[styles.container, { height: size, width: size }]}
+      style={[styles.container, { height: size, width: size }, containerStyle]}
       disabled={disabled}
     >
       <FastImage

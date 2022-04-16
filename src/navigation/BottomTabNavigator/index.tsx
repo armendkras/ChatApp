@@ -9,6 +9,7 @@ import { StyleSheet, Platform } from "react-native";
 import TabButton from "./TabButton";
 // import ChatNavigator from "../ChatNavigator/ChatWithBottomBar";
 import { MessageIcon, PeopleIcon, DiscoverIcon } from "../../assets/svgs";
+import { Colors } from "../../constants/Corlors";
 // import { Colors } from "../../constants/colors";
 
 const Stack = createStackNavigator();
@@ -37,7 +38,9 @@ const TabNavigator: FC<TabNavigatorProps> = (props) => {
               Icon={
                 <MessageIcon
                   color={
-                    props.accessibilityState.selected ? "#0084FE" : "#A4AAB2"
+                    props.accessibilityState.selected
+                      ? Colors.BLUE
+                      : Colors.GRAY
                   }
                 />
               }
@@ -58,7 +61,9 @@ const TabNavigator: FC<TabNavigatorProps> = (props) => {
               Icon={
                 <PeopleIcon
                   color={
-                    props.accessibilityState.selected ? "#0084FE" : "#A4AAB2"
+                    props.accessibilityState.selected
+                      ? Colors.BLUE
+                      : Colors.GRAY
                   }
                 />
               }
@@ -78,7 +83,9 @@ const TabNavigator: FC<TabNavigatorProps> = (props) => {
               Icon={
                 <DiscoverIcon
                   color={
-                    props.accessibilityState.selected ? "#0084FE" : "#A4AAB2"
+                    props.accessibilityState.selected
+                      ? Colors.BLUE
+                      : Colors.GRAY
                   }
                 />
               }

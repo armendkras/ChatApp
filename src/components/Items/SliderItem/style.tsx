@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "../../../constants/Corlors";
 
 const styles = StyleSheet.create({
   text: {
-    color: "rgba(0, 0, 0, 0.35)",
+    color: Colors.LIGHT_GRAY6,
     marginTop: 7,
     fontSize: 13,
   },
@@ -11,7 +12,7 @@ const styles = StyleSheet.create({
     width: 52,
     height: 52,
     borderRadius: 999,
-    backgroundColor: "rgba(0, 0, 0, 0.04)",
+    backgroundColor: Colors.LIGHT_GRAY4,
     justifyContent: "center",
     alignItems: "center",
   },

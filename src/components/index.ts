@@ -8,7 +8,10 @@ import Slider from "./Slider";
 import UsersCard from './Cards/UsersCard';
 import ChatsContent from "./Contents/ChatsContent";
 import PeopleContent from "./Contents/PeopleContent";
-
+import AddStoryItem from "./Items/AddStoryItem";
+import PeopleCard from "./Cards/PeopleCard";
+import DiscoverContent from "./Contents/DiscoverContent";
+import DiscoverStoryCard from "./Cards/DiscoverStoryCard";
 export {
     MainAvatar,
     PrimaryText,
@@ -19,5 +22,9 @@ export {
     Slider,
     UsersCard,
     ChatsContent,
-    PeopleContent
+    PeopleContent,
+    AddStoryItem,
+    PeopleCard,
+    DiscoverContent,
+    DiscoverStoryCard
 }

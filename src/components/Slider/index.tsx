@@ -17,7 +17,6 @@ const Slider = () => {
   return (
     <View>
       <FlatList
-        style={{ marginTop: 20 }}
         showsHorizontalScrollIndicator={false}
         data={data}
         horizontal
