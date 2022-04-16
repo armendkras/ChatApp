@@ -7,9 +7,9 @@ interface PrimaryTextProps {
   rest?: any;
 }
 
-const PrimaryText: FC<PrimaryTextProps> = ({ value, style, rest }) => {
+const PrimaryText: FC<PrimaryTextProps> = ({ value, style, ...rest }) => {
   return (
-    <Text {...rest} style={[{ fontFamily: "Poppins-Regular" }, style]}>
+    <Text style={[{ fontFamily: "Poppins-Regular" }, style]} {...rest}>
       {value}
     </Text>
   );

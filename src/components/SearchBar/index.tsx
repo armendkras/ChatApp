@@ -17,7 +17,7 @@ const SearchBar: FC<SearchBarProps> = ({
   placeholder,
 }) => {
   return (
-    <View style={[containerStyle, , styles.container]}>
+    <View style={[styles.container, containerStyle]}>
       <View style={styles.icon}>{icon}</View>
       <TextInput
         onChangeText={onChangeText}
