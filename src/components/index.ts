@@ -12,6 +12,9 @@ import AddStoryItem from "./Items/AddStoryItem";
 import PeopleCard from "./Cards/PeopleCard";
 import DiscoverContent from "./Contents/DiscoverContent";
 import DiscoverStoryCard from "./Cards/DiscoverStoryCard";
+import NewMessageContent from "./Contents/NewMesssageContent";
+import MessageRoomContent from "./Contents/MessageRoomContent";
+import MessageRoomHeader from "./Headers/MessageRoomHeader";
 export {
     MainAvatar,
     PrimaryText,
@@ -26,5 +29,9 @@ export {
     AddStoryItem,
     PeopleCard,
     DiscoverContent,
-    DiscoverStoryCard
+    DiscoverStoryCard,
+    NewMessageContent,
+    MessageRoomContent,
+    MessageRoomHeader
+
 }

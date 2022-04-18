@@ -18,7 +18,7 @@ const PeopleContent = () => {
       <FlatList
         data={data}
         renderItem={({ item, index }) => (
-          <PeopleCard name={item.name} img={item.img} />
+          <PeopleCard waveHand name={item.name} img={item.img} />
         )}
       />
     </View>

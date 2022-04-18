@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import MainAvatar from "../../Avatars/MainAvatar";
 import PrimaryText from "../../Typography/PrimaryText";
 import RoundButton from "../../Buttons/RoundButton";
+import { useNavigation } from "@react-navigation/native";
 import {
   AddPeopleIcon,
   CammeraIcon,
@@ -17,6 +18,7 @@ interface MainHeaderProps {
 }
 
 const MainHeader: FC<MainHeaderProps> = ({ containerStyle, type }) => {
+  const navigation = useNavigation();
   return (
     <View>
       <View style={[styles.container, containerStyle]}>
@@ -30,7 +32,10 @@ const MainHeader: FC<MainHeaderProps> = ({ containerStyle, type }) => {
               containerStyle={{ marginRight: 12 }}
               icon={<CammeraIcon width={20} height={18} />}
             />
-            <RoundButton icon={<NewMessageIcon width={19} height={18} />} />
+            <RoundButton
+              onPress={() => navigation.navigate("NewMessage")}
+              icon={<NewMessageIcon width={19} height={18} />}
+            />
           </View>
         )}
         {type == "People" && (

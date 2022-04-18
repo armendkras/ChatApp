@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
+import { Colors } from "../../constants/Corlors";
 
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
-    backgroundColor: "rgba(0, 0, 0, 0.05)",
+    backgroundColor: Colors.LIGHT_GRAY4,
     height: 36,
     alignItems: "center",
     paddingHorizontal: 10,
@@ -17,8 +18,10 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontFamily: "Poppins-Regular",
     lineHeight: 22,
+    height: "100%",
+    padding: 0,
   },
-  icon: { height: 17, width: 17 },
+  icon: { height: 20, width: 20 },
 });
 
 export default styles;

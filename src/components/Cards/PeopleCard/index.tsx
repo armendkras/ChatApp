@@ -9,15 +9,23 @@ interface PeopleCardProps {
   containerStyle?: {};
   img?: string;
   name: string;
+  waveHand?: boolean;
 }
 
-const PeopleCard: FC<PeopleCardProps> = ({ containerStyle, img, name }) => {
+const PeopleCard: FC<PeopleCardProps> = ({
+  containerStyle,
+  img,
+  name,
+  waveHand,
+}) => {
   return (
     <Pressable style={[styles.container, containerStyle]}>
       <MainAvatar size={40} img={img} />
       <View style={styles.textIcon}>
         <PrimaryText value={name} style={styles.text} />
-        <RoundButton disabled icon={<WaveHand width={17} height={18} />} />
+        {waveHand && (
+          <RoundButton disabled icon={<WaveHand width={17} height={18} />} />
+        )}
       </View>
     </Pressable>
   );

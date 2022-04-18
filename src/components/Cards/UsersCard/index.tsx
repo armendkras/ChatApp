@@ -9,6 +9,7 @@ import styles from "./style";
 import LeftButton from "./LeftButton";
 import RightButton from "./RightButton";
 import { Colors } from "../../../constants/Corlors";
+import { useNavigation } from "@react-navigation/native";
 
 interface UsersCardProps {
   name: string;
@@ -17,6 +18,7 @@ interface UsersCardProps {
 }
 
 const UsersCard: FC<UsersCardProps> = ({ name, message, img }) => {
+  const navigation = useNavigation();
   return (
     <SwipeProvider>
       <SwipeItem
@@ -27,12 +29,12 @@ const UsersCard: FC<UsersCardProps> = ({ name, message, img }) => {
       >
         <Pressable
           style={styles.swipeContentContainerStyle}
-          onPress={() => console.log("pressed")}
+          onPress={() => navigation.navigate("MessageRoom")}
         >
           <MainAvatar img={img} />
           <View style={styles.texts}>
             <PrimaryText
-              style={{ fontSize: 17, fontWeight: "500" }}
+              style={{ fontSize: 17, fontWeight: "500", color: "black" }}
               value={name}
             />
             <PrimaryText
