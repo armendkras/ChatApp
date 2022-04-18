@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import BottomTabNavigator from "../BottomTabNavigator";
+import { MessageRoom, NewMessage } from "../../screens";
 
 interface MainNavigatorProps {}
 
@@ -14,6 +15,8 @@ const MainNavigator: FC<MainNavigatorProps> = () => {
       }}
     >
       <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} />
+      <Stack.Screen name="NewMessage" component={NewMessage} />
+      <Stack.Screen name="MessageRoom" component={MessageRoom} />
     </Stack.Navigator>
   );
 };

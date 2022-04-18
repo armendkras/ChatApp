@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     borderBottomColor: "rgba(0, 0, 0, 0.12)",
     marginLeft: 12,
   },
-  text: { fontSize: 17, fontWeight: "500" },
+  text: { fontSize: 17, fontWeight: "500", color: "black" },
 });
 
 export default styles;
