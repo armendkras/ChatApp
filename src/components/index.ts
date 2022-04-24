@@ -15,6 +15,8 @@ import DiscoverStoryCard from "./Cards/DiscoverStoryCard";
 import NewMessageContent from "./Contents/NewMesssageContent";
 import MessageRoomContent from "./Contents/MessageRoomContent";
 import MessageRoomHeader from "./Headers/MessageRoomHeader";
+import ChatInput from "./Inputs/ChatInput";
+import MessageItem from "./Items/MessageItem";
 export {
     MainAvatar,
     PrimaryText,
@@ -32,6 +34,8 @@ export {
     DiscoverStoryCard,
     NewMessageContent,
     MessageRoomContent,
-    MessageRoomHeader
+    MessageRoomHeader,
+    ChatInput,
+    MessageItem
 
 }
