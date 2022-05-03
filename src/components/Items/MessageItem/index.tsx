@@ -8,9 +8,17 @@ interface MessageItemProps {
   id: number;
   sameUser: boolean;
   nextUser: boolean;
+  img: string;
+  message: string;
 }
 
-const MessageItem: FC<MessageItemProps> = ({ id, sameUser, nextUser }) => {
+const MessageItem: FC<MessageItemProps> = ({
+  id,
+  sameUser,
+  nextUser,
+  img,
+  message,
+}) => {
   console.log(nextUser);
   return (
     <>
@@ -26,7 +34,7 @@ const MessageItem: FC<MessageItemProps> = ({ id, sameUser, nextUser }) => {
         ]}
       >
         <View style={styles.userMessage}>
-          {id !== 1 && !sameUser && <MainAvatar size={28} />}
+          {id !== 1 && !sameUser && <MainAvatar img={img} size={28} />}
           <View
             style={[
               styles.messageItem,
@@ -36,7 +44,7 @@ const MessageItem: FC<MessageItemProps> = ({ id, sameUser, nextUser }) => {
             ]}
           >
             <Text style={{ color: id == 1 ? "white" : "black" }}>
-              MessageItem
+              {message}
             </Text>
           </View>
         </View>

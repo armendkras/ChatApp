@@ -457,7 +457,7 @@ export const ArrowRight: FC<PropsModel> = ({
       <Path
         d="M0 11.4122L1.41421 12.8264L7.82742 6.4132L1.41421 0L0 1.41421L4.99899 6.4132L0 11.4122Z"
         fill={color}
-        fillOpacity="0.2"
+        fillOpacity="1"
       />
     </Svg>
   );

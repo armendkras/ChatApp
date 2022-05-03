@@ -25,6 +25,8 @@ const MessageRoomContent = () => {
               sameUser={IsSenderSame(item.id, data[index - 1]?.id)}
               nextUser={IsNextUser(item.id, data[index + 1]?.id)}
               id={item.id}
+              img={item.img}
+              message={item.message}
             />
           )}
           style={styles.flatList}
